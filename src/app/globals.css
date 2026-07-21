@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #0A0A0A;
+  --color-surface: #121212;
+  --color-border: #1E1E22;
+  --color-crimson: #E50914;
+  --color-crimson-light: #FF1E27;
+  --color-gray-450: #9CA3AF;
+  --font-display: "Bebas Neue", "Syne", sans-serif;
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-cursive: "Caveat", "Dancing Script", cursive;
+}
+
+@utility font-cursive {
+  font-family: var(--font-cursive);
+}
+
+@layer base {
+  html, body {
+    background-color: #0a0a0a !important;
+    color: #ffffff !important;
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
