@@ -13,7 +13,7 @@ export default function Projects() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-24">
       <div className="mb-14 flex items-end justify-between">
-        <h2 className="text-4xl font-display font-bold tracking-tight md:text-5xl">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-display font-bold tracking-tight">
           SELECTED <span className="text-crimson">PROJECTS</span>
         </h2>
         <a

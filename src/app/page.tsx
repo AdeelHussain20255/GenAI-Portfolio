@@ -10,7 +10,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-dark">
+    <main className="min-h-screen bg-dark overflow-x-hidden">
       <Header />
       <AnimatedSection><Hero /></AnimatedSection>
       <AnimatedSection delay={0.1}><Projects /></AnimatedSection>

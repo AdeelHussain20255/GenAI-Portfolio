@@ -25,7 +25,7 @@ export default function Contact() {
 
           {/* Title */}
           <div className="space-y-3">
-            <h2 className="text-6xl sm:text-7xl font-black uppercase tracking-tight leading-[0.9]">
+            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight leading-[0.9]">
               GET IN <br />
               <span className="text-[#E50914">TOUCH</span>
             </h2>
@@ -48,7 +48,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-[10px] font-mono uppercase tracking-widest text-gray-400">EMAIL US</p>
-                  <p className="text-sm font-semibold text-white group-hover:text-[#E50914] transition-colors">adeelhussain20255@gmail.com</p>
+                  <p className="text-sm font-semibold text-white group-hover:text-[#E50914] transition-colors break-all">adeelhussain20255@gmail.com</p>
                 </div>
               </div>
               <ArrowUpRight size={18} className="text-gray-500 group-hover:text-[#E50914] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />

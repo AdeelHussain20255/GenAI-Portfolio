@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] bg-[#0A0A0A] text-white flex flex-col justify-center px-6 lg:px-16 py-12 overflow-hidden">
+    <section className="relative min-h-[90vh] bg-[#0A0A0A] text-white flex flex-col justify-center px-6 lg:px-16 pt-24 md:pt-32 pb-12 overflow-hidden">
       
       {/* 1. GIANT CONDENSED BACKDROP TEXT */}
       <div className="absolute top-6 left-0 w-full flex justify-center pointer-events-none select-none z-0">
@@ -34,10 +34,10 @@ export default function Hero() {
           </div>
         </div>
     {/* RIGHT COLUMN: ZOOMED ARCH PORTRAIT + FAR-RIGHT STATS */}
-    <div className="lg:col-span-7 relative flex flex-col sm:flex-row items-end justify-end gap-6 w-full">
+      <div className="lg:col-span-7 relative flex flex-col sm:flex-row items-end justify-end gap-6 w-full max-w-[320px] md:max-w-none mx-auto sm:mx-0">
       
       {/* Floating Red '+' Accent */}
-      <span className="absolute bottom-10 left-2 lg:-left-6 text-[#E50914] font-bold text-2xl select-none z-30 animate-pulse">
+      <span className="hidden md:block absolute bottom-10 left-2 lg:-left-6 text-[#E50914] font-bold text-2xl select-none z-30 animate-pulse">
         +
       </span>
 
@@ -48,7 +48,7 @@ export default function Hero() {
         <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[110%] h-36 bg-[#E50914]/30 blur-3xl rounded-full pointer-events-none z-0" />
 
         {/* Rounded Arch Mask Container */}
-        <div className="relative z-10 w-full h-[460px] lg:h-[520px] rounded-b-[180px] overflow-hidden bg-gradient-to-b from-transparent via-[#0A0A0A]/30 to-[#180303] border-b-2 border-[#E50914] shadow-[0_25px_50px_rgba(229,9,20,0.4)] flex items-end justify-center">
+        <div className="relative z-10 w-full h-[360px] md:h-[500px] lg:h-[520px] rounded-b-[180px] overflow-hidden bg-gradient-to-b from-transparent via-[#0A0A0A]/30 to-[#180303] border-b-2 border-[#E50914] shadow-[0_25px_50px_rgba(229,9,20,0.4)] flex items-end justify-center">
           <img 
             src="/profile.png" 
             alt="Adeel Hussain" 
@@ -64,19 +64,19 @@ export default function Hero() {
         </p>
         <div className="space-y-4 pt-4 border-t border-white/10">
           <div>
-            <h3 className="text-3xl font-black text-[#E50914]">2029</h3>
+            <h3 className="text-3xl md:text-5xl font-black text-[#E50914]">2029</h3>
             <p className="text-[9px] tracking-wider uppercase text-gray-400 font-medium">
               EXPECTED GRADUATION (DUET)
             </p>
           </div>
           <div>
-            <h3 className="text-3xl font-black text-[#E50914]">6+</h3>
+            <h3 className="text-3xl md:text-5xl font-black text-[#E50914]">6+</h3>
             <p className="text-[9px] tracking-wider uppercase text-gray-400 font-medium">
               MONTHS GEN AI (S.M.I.T)
             </p>
           </div>
           <div>
-            <h3 className="text-3xl font-black text-[#E50914]">10+</h3>
+            <h3 className="text-3xl md:text-5xl font-black text-[#E50914]">10+</h3>
             <p className="text-[9px] tracking-wider uppercase text-gray-400 font-medium">
               PROJECTS & AGENTS BUILT
             </p>
