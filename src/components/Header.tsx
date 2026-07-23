@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="w-full border-b border-[#1e1e22] bg-[#0a0a0a] text-white py-3 px-6 text-xs uppercase tracking-widest flex justify-between items-center fixed top-0 z-50">
+    <header className="w-full border-b border-[#1e1e22] bg-[#0a0a0a] text-white py-3 px-6 text-[9px] sm:text-xs leading-tight uppercase tracking-widest flex justify-between items-center fixed top-0 z-50">
       <div className="flex items-center gap-2">
         <span className="w-2 h-2 rounded-full bg-[#e50914] animate-pulse"></span>
         <span>BSCS STUDENT / GEN AI ENGINEER</span>

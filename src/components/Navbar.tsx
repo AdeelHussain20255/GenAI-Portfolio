@@ -28,7 +28,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-12 left-6 z-50">
+    <nav className="fixed top-4 left-4 z-50">
       <MenuContainer items={items} />
     </nav>
   );

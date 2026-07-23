@@ -24,14 +24,11 @@ export default function Contact() {
           </div>
 
           {/* Title */}
-          <div className="space-y-3">
+          <div className="space-y-3 mb-6">
             <h2 className="glow-text-white text-white font-black uppercase text-4xl md:text-6xl tracking-tight leading-none select-none">
               GET IN<br />
               TOUCH
             </h2>
-            <p className="text-gray-400 text-sm sm:text-base leading-relaxed pt-2 max-w-md">
-              Have questions about AI agent architectures, backend systems, or want to discuss potential roles and collaborations? Let's talk.
-            </p>
           </div>
 
           {/* Contact Cards */}
@@ -103,7 +100,7 @@ export default function Contact() {
                 </label>
                 <input 
                   type="text" 
-                  placeholder="John Doe" 
+                  placeholder="Adeel Hussain" 
                   className="w-full bg-[#181818] border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-[#E50914] transition-colors"
                 />
               </div>
@@ -115,7 +112,7 @@ export default function Contact() {
                 </label>
                 <input 
                   type="email" 
-                  placeholder="your.email@example.com" 
+                  placeholder="adeelhussain20255@gmail.com" 
                   className="w-full bg-[#181818] border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:border-[#E50914] transition-colors"
                 />
               </div>

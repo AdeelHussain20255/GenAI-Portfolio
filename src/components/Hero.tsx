@@ -25,7 +25,7 @@ export default function Hero() {
       
       {/* 1. GIANT CONDENSED BACKDROP TEXT */}
       <h1
-        className="absolute top-6 sm:top-8 left-1/2 -translate-x-1/2 text-[14.5vw] font-black uppercase text-[#E50914] tracking-tight leading-none select-none pointer-events-none z-0 whitespace-nowrap scale-x-[1.08] scale-y-[1.18] origin-center"
+        className="absolute top-12 sm:top-8 left-1/2 -translate-x-1/2 text-[15vw] sm:text-[14.5vw] font-black uppercase text-[#E50914] tracking-tight leading-none select-none pointer-events-none z-0 whitespace-nowrap scale-x-[1.08] scale-y-[1.18] origin-center"
         style={{
           textShadow: '0 0 15px rgba(229, 9, 20, 0.9), 0 0 35px rgba(229, 9, 20, 0.8), 0 0 75px rgba(229, 9, 20, 0.6), 0 0 120px rgba(229, 9, 20, 0.4)'
         }}

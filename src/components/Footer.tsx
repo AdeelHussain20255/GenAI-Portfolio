@@ -18,7 +18,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#0A0A0A] text-white border-t border-white/10 py-8 px-6 lg:px-16 overflow-hidden">
+    <footer className="relative bg-[#0A0A0A] text-white border-t border-white/10 py-6 sm:py-8 px-6 lg:px-16 overflow-hidden">
       
       {/* FAR RIGHT VERTICAL ACCENT BAR */}
       <div className="absolute right-0 top-0 bottom-0 w-1.5 bg-[#E50914]" />
