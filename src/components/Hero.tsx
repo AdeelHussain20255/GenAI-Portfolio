@@ -21,10 +21,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="relative min-h-[90vh] text-white flex flex-col justify-start sm:justify-between px-6 lg:px-16 pt-14 sm:pt-20 pb-12">
+    <section id="hero" className="relative min-h-[90vh] text-white flex flex-col justify-start sm:justify-between px-6 lg:px-16 pt-12 sm:pt-20 pb-12">
 
       {/* 2. MAIN HERO CONTENT */}
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-end max-w-7xl mx-auto w-full mt-2 sm:my-auto">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-8 items-end max-w-7xl mx-auto w-full mt-2 sm:my-auto">
 
         {/* LEFT COLUMN: NAME & BIO */}
         <div className="lg:col-span-5 space-y-4 z-10 mb-2">
