@@ -56,6 +56,7 @@ export default function BouncingBalls({
     if (!ctx) return;
 
     function resize() {
+      if (!container || !canvas || !ctx) return;
       const dpr = window.devicePixelRatio || 1;
       const w = container.offsetWidth;
       const h = container.offsetHeight;
@@ -86,7 +87,7 @@ export default function BouncingBalls({
     let animating = true;
 
     function draw() {
-      if (!animating) return;
+      if (!animating || !ctx) return;
       const { w, h } = sizeRef.current;
       if (w === 0 || h === 0) {
         rafRef.current = requestAnimationFrame(draw);
@@ -146,7 +147,7 @@ export default function BouncingBalls({
     ro.observe(container);
 
     function onMouseDown(e: MouseEvent) {
-      const rect = container.getBoundingClientRect();
+      const rect = container!.getBoundingClientRect();
       mouseRef.current = {
         x: e.clientX - rect.left,
         y: e.clientY - rect.top,
@@ -159,13 +160,13 @@ export default function BouncingBalls({
     }
 
     function onMouseMove(e: MouseEvent) {
-      const rect = container.getBoundingClientRect();
+      const rect = container!.getBoundingClientRect();
       mouseRef.current.x = e.clientX - rect.left;
       mouseRef.current.y = e.clientY - rect.top;
     }
 
     function onTouchStart(e: TouchEvent) {
-      const rect = container.getBoundingClientRect();
+      const rect = container!.getBoundingClientRect();
       const t = e.touches[0];
       mouseRef.current = {
         x: t.clientX - rect.left,
@@ -179,7 +180,7 @@ export default function BouncingBalls({
     }
 
     function onTouchMove(e: TouchEvent) {
-      const rect = container.getBoundingClientRect();
+      const rect = container!.getBoundingClientRect();
       const t = e.touches[0];
       mouseRef.current.x = t.clientX - rect.left;
       mouseRef.current.y = t.clientY - rect.top;
