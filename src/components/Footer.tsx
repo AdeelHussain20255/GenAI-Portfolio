@@ -1,8 +1,18 @@
 'use client';
 
-import React from 'react';
+import { useState, useEffect } from 'react';
+import SpecialText from '@/components/ui/special-text';
 
 export default function Footer() {
+  const [triggerKey, setTriggerKey] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTriggerKey((prev) => prev + 1);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -18,7 +28,7 @@ export default function Footer() {
         {/* LEFT: LOGO & COPYRIGHT */}
         <div className="space-y-1 text-center md:text-left">
           <h3 className="text-xl font-black uppercase tracking-wider text-white">
-            ADEEL HUSSAIN<span className="text-[#E50914]">.</span>
+            <span className="glow-text-white text-white">ADEEL HUSSAIN</span><span className="glow-text-red text-[#E50914]">.</span>
           </h3>
           <p className="text-[10px] font-mono tracking-widest text-gray-500 uppercase">
             © 2026 ALL RIGHTS RESERVED.
@@ -65,8 +75,8 @@ export default function Footer() {
             onClick={scrollToTop}
             className="border border-white/20 hover:border-[#E50914] text-gray-300 hover:text-white px-5 py-2 rounded-full text-xs font-mono tracking-wide flex items-center gap-1.5 transition-all duration-300 hover:bg-[#E50914]/10"
           >
-            <span>Back to Top</span>
-            <span className="text-[#E50914] font-bold">↑</span>
+            <SpecialText key={triggerKey}>Back to Top</SpecialText>
+            <span className="text-[#E50914] glow-text-red font-bold">↑</span>
           </button>
         </div>
 

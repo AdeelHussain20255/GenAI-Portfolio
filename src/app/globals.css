@@ -7,13 +7,29 @@
   --color-crimson: #E50914;
   --color-crimson-light: #FF1E27;
   --color-gray-450: #9CA3AF;
-  --font-display: "Bebas Neue", "Syne", sans-serif;
+  --font-display: var(--font-display), "Syne", sans-serif;
   --font-sans: system-ui, -apple-system, sans-serif;
   --font-cursive: "Caveat", "Dancing Script", cursive;
 }
 
 @utility font-cursive {
   font-family: var(--font-cursive);
+}
+
+@layer utilities {
+  .glow-text-white {
+    filter:
+      drop-shadow(0 0 12px rgba(255, 240, 210, 0.55))
+      drop-shadow(0 0 32px rgba(255, 220, 180, 0.35))
+      drop-shadow(0 0 60px rgba(255, 200, 150, 0.15));
+  }
+
+  .glow-text-red {
+    filter:
+      drop-shadow(0 0 15px rgba(229, 9, 20, 0.7))
+      drop-shadow(0 0 35px rgba(229, 9, 20, 0.45))
+      drop-shadow(0 0 70px rgba(229, 9, 20, 0.25));
+  }
 }
 
 @layer base {

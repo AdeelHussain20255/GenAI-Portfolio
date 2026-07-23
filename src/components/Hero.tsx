@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import SpecialText from '@/components/ui/special-text';
+import TextShimmer from '@/components/ui/text-shimmer';
 
 export default function Hero() {
+  const [helloKey, setHelloKey] = useState(0);
+  const [statsKey, setStatsKey] = useState(0);
+
+  useEffect(() => {
+    const helloTimer = setInterval(() => {
+      setHelloKey((prev) => prev + 1);
+    }, 8000);
+    return () => clearInterval(helloTimer);
+  }, []);
+
+  useEffect(() => {
+    const statsTimer = setInterval(() => {
+      setStatsKey((prev) => prev + 1);
+    }, 3000);
+    return () => clearInterval(statsTimer);
+  }, []);
+
   return (
-    <section className="relative min-h-[90vh] bg-[#0A0A0A] text-white flex flex-col justify-center px-6 lg:px-16 pt-24 md:pt-32 pb-12 overflow-hidden">
+    <section id="hero" className="relative min-h-[90vh] text-white flex flex-col justify-center px-6 lg:px-16 pt-24 md:pt-32 pb-12">
       
       {/* 1. GIANT CONDENSED BACKDROP TEXT */}
       <div className="absolute top-6 left-0 w-full flex justify-center pointer-events-none select-none z-0">
-        <h1 className="text-[16vw] xl:text-[15rem] font-black tracking-tighter text-[#E50914] leading-none uppercase opacity-90">
+        <h1 className="glow-text-red inline-block font-black text-[#E50914] tracking-tighter uppercase origin-top scale-x-110 scale-y-125 md:scale-x-115 md:scale-y-[1.35] text-[13vw] leading-none select-none">
           PORTFOLIO
         </h1>
       </div>
@@ -16,21 +35,29 @@ export default function Hero() {
         
         {/* LEFT COLUMN: NAME & BIO */}
         <div className="lg:col-span-5 space-y-4 z-10 mb-2">
-          <p className="font-serif italic text-gray-300 text-2xl">Hello, I'm</p>
-          <h2 className="text-6xl lg:text-7xl xl:text-8xl font-black uppercase tracking-tighter text-white leading-[0.85]">
+          <SpecialText key={`hello-${helloKey}`} className="text-neutral-400 font-serif italic text-lg" delay={0.2} inView>
+            Hello, I'm
+          </SpecialText>
+          <h2 className="glow-text-white text-6xl lg:text-7xl xl:text-8xl font-black uppercase tracking-tighter text-white leading-[0.85]">
             ADEEL<br />HUSSAIN
           </h2>
-          <p className="text-[#E50914] font-bold text-xs tracking-widest uppercase pt-2">
+          <TextShimmer
+            duration={2}
+            className="text-xs md:text-sm font-mono font-bold tracking-wider uppercase [--base-color:#E50914] [--base-gradient-color:#ffffff]"
+          >
             BSCS STUDENT & GEN AI ENGINEER
-          </p>
+          </TextShimmer>
           <p className="text-gray-300 text-sm max-w-md leading-relaxed pt-1 font-normal">
             3rd-semester BSCS student at DUET specializing in Generative AI, LLM workflows, and intelligent agent backends using Python, FastAPI, Next.js, and Java.
           </p>
           <div className="flex items-center gap-2 pt-2">
             <span className="w-2.5 h-2.5 rounded-full bg-[#E50914] animate-pulse" />
-            <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+            <TextShimmer
+              duration={1.8}
+              className="text-[10px] md:text-xs font-mono uppercase tracking-widest [--base-color:#a1a1aa] [--base-gradient-color:#E50914]"
+            >
               OPEN TO OPPORTUNITIES
-            </span>
+            </TextShimmer>
           </div>
         </div>
     {/* RIGHT COLUMN: ZOOMED ARCH PORTRAIT + FAR-RIGHT STATS */}
@@ -45,7 +72,7 @@ export default function Hero() {
       <div className="relative w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[410px]">
         
         {/* Deep Red Glow Base */}
-        <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[110%] h-36 bg-[#E50914]/30 blur-3xl rounded-full pointer-events-none z-0" />
+        <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 w-[120%] h-48 bg-gradient-to-b from-[#E50914]/20 via-[#E50914]/5 to-transparent blur-3xl rounded-full pointer-events-none z-0" />
 
         {/* Rounded Arch Mask Container */}
         <div className="relative z-10 w-full h-[360px] md:h-[500px] lg:h-[520px] rounded-b-[180px] overflow-hidden bg-gradient-to-b from-transparent via-[#0A0A0A]/30 to-[#180303] border-b-2 border-[#E50914] shadow-[0_25px_50px_rgba(229,9,20,0.4)] flex items-end justify-center">
@@ -59,27 +86,30 @@ export default function Hero() {
 
       {/* FAR-RIGHT STATS */}
       <div className="space-y-5 text-left sm:text-right z-10 min-w-[160px] mb-2">
-        <p className="text-gray-300 text-xs leading-relaxed max-w-[160px]">
+        <TextShimmer
+          duration={2.5}
+          className="text-xs md:text-sm text-neutral-400 font-normal leading-relaxed [--base-color:#a1a1aa] [--base-gradient-color:#ffffff]"
+        >
           Architecting intelligent AI workflows & production-grade backend systems.
-        </p>
+        </TextShimmer>
         <div className="space-y-4 pt-4 border-t border-white/10">
           <div>
-            <h3 className="text-3xl md:text-5xl font-black text-[#E50914]">2029</h3>
-            <p className="text-[9px] tracking-wider uppercase text-gray-400 font-medium">
+            <h3 className="glow-text-red text-3xl md:text-5xl font-black text-[#E50914] select-none">2029</h3>
+            <SpecialText key={`grad-${statsKey}`} className="text-neutral-500 text-[10px] md:text-xs font-mono uppercase tracking-wider" delay={0.6} inView>
               EXPECTED GRADUATION (DUET)
-            </p>
+            </SpecialText>
           </div>
           <div>
-            <h3 className="text-3xl md:text-5xl font-black text-[#E50914]">6+</h3>
-            <p className="text-[9px] tracking-wider uppercase text-gray-400 font-medium">
+            <h3 className="glow-text-red text-3xl md:text-5xl font-black text-[#E50914] select-none">6+</h3>
+            <SpecialText key={`smit-${statsKey}`} className="text-neutral-500 text-[10px] md:text-xs font-mono uppercase tracking-wider" delay={0.8} inView>
               MONTHS GEN AI (S.M.I.T)
-            </p>
+            </SpecialText>
           </div>
           <div>
-            <h3 className="text-3xl md:text-5xl font-black text-[#E50914]">10+</h3>
-            <p className="text-[9px] tracking-wider uppercase text-gray-400 font-medium">
+            <h3 className="glow-text-red text-3xl md:text-5xl font-black text-[#E50914] select-none">10+</h3>
+            <SpecialText key={`projects-${statsKey}`} className="text-neutral-500 text-[10px] md:text-xs font-mono uppercase tracking-wider" delay={1.0} inView>
               PROJECTS & AGENTS BUILT
-            </p>
+            </SpecialText>
           </div>
         </div>
       </div>

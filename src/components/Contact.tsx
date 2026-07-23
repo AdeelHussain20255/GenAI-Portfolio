@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative min-h-screen bg-[#0A0A0A] text-white px-6 lg:px-16 py-20 flex flex-col justify-center overflow-hidden">
+    <section id="contact" className="relative min-h-screen text-white px-6 lg:px-16 py-20 flex flex-col justify-center overflow-hidden">
       
       {/* BACKDROP STENCIL TEXT */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none z-0 opacity-[0.03] w-full text-center">
@@ -25,9 +25,9 @@ export default function Contact() {
 
           {/* Title */}
           <div className="space-y-3">
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tight leading-[0.9]">
-              GET IN <br />
-              <span className="text-[#E50914">TOUCH</span>
+            <h2 className="glow-text-white text-white font-black uppercase text-4xl md:text-6xl tracking-tight leading-none select-none">
+              GET IN<br />
+              TOUCH
             </h2>
             <p className="text-gray-400 text-sm sm:text-base leading-relaxed pt-2 max-w-md">
               Have questions about AI agent architectures, backend systems, or want to discuss potential roles and collaborations? Let's talk.
@@ -90,7 +90,7 @@ export default function Contact() {
         <div className="lg:col-span-7">
           <div className="bg-[#121212] border border-white/5 rounded-2xl p-6 sm:p-8 md:p-10 shadow-2xl space-y-6">
             
-            <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-white">
+            <h3 className="glow-text-white text-2xl sm:text-3xl font-black uppercase tracking-tight text-white">
               Send a Message
             </h3>
 

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Briefcase, Cpu, Sparkles, Terminal, Quote } from 'lucide-react';
+import TextShimmer from '@/components/ui/text-shimmer';
 
 export default function Qualifications() {
   return (
-    <section id="about" className="relative min-h-screen bg-[#0A0A0A] text-white px-6 lg:px-16 py-20 flex flex-col justify-center">
+    <section id="experience" className="relative min-h-screen text-white px-6 lg:px-16 py-20 flex flex-col justify-center">
       
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
         
@@ -13,7 +14,7 @@ export default function Qualifications() {
             {/* Header with Red Vertical Accent Line */}
             <div className="flex items-center gap-3 mb-8">
               <div className="w-1 h-6 bg-[#E50914] rounded-full" />
-              <h2 className="text-2xl font-black uppercase tracking-tight text-white">
+              <h2 className="font-display text-2xl font-black uppercase tracking-tight text-white">
                 EDUCATION
               </h2>
             </div>
@@ -24,13 +25,13 @@ export default function Qualifications() {
               {/* Item 1 */}
               <div className="relative">
                 <span className="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full border-2 border-[#E50914] bg-[#121212]" />
-                <h3 className="text-base font-bold text-white leading-snug">
+                <h3 className="font-display text-base font-extrabold tracking-tight text-white leading-snug">
                   B.Sc. Computer Science
                 </h3>
                 <p className="text-xs text-gray-400 mt-0.5">
                   Dawood University of Eng. & Tech. (DUET)
                 </p>
-                <p className="text-[11px] font-mono text-[#E50914] mt-1">
+                <p className="glow-text-red text-[11px] font-mono text-[#E50914] mt-1">
                   2025 — 2029
                 </p>
               </div>
@@ -38,13 +39,13 @@ export default function Qualifications() {
               {/* Item 2 */}
               <div className="relative">
                 <span className="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full border-2 border-[#E50914] bg-[#121212]" />
-                <h3 className="text-base font-bold text-white leading-snug">
+                <h3 className="font-display text-base font-extrabold tracking-tight text-white leading-snug">
                   Generative AI & Chatbots
                 </h3>
                 <p className="text-xs text-gray-400 mt-0.5">
                   Saylani Mass I.T Training (S.M.I.T)
                 </p>
-                <p className="text-[11px] font-mono text-[#E50914] mt-1">
+                <p className="glow-text-red text-[11px] font-mono text-[#E50914] mt-1">
                   2025 — 2026
                 </p>
               </div>
@@ -85,7 +86,7 @@ export default function Qualifications() {
             {/* Header with Red Vertical Accent Line */}
             <div className="flex items-center gap-3 mb-8">
               <div className="w-1 h-6 bg-[#E50914] rounded-full" />
-              <h2 className="text-2xl font-black uppercase tracking-tight text-white">
+              <h2 className="font-display text-2xl font-black uppercase tracking-tight text-white">
                 EXPERIENCE
               </h2>
             </div>
@@ -130,9 +131,9 @@ export default function Qualifications() {
                     </div>
                     <div className="space-y-0.5">
                       <div className="flex items-center justify-between">
-                        <p className="text-[10px] font-mono font-bold text-[#E50914] tracking-wider">{item.date}</p>
+                        <p className="glow-text-red text-[10px] font-mono font-bold text-[#E50914] tracking-wider">{item.date}</p>
                       </div>
-                      <h3 className="text-sm font-bold text-white group-hover:text-[#E50914] transition-colors leading-snug">
+                      <h3 className="font-display text-sm font-extrabold tracking-tight text-white group-hover:text-[#E50914] transition-colors leading-snug">
                         {item.title}
                       </h3>
                       <p className="text-[11px] text-gray-400 font-medium">{item.company}</p>
@@ -155,7 +156,7 @@ export default function Qualifications() {
                 AH
               </div>
               <div>
-                <p className="text-xs font-bold text-white">What Leads Say</p>
+                <p className="font-display text-xs font-black uppercase tracking-tight text-white">What Leads Say</p>
                 <p className="text-[9px] font-mono text-gray-400 uppercase tracking-widest">RECOMMENDATION</p>
               </div>
             </div>
@@ -163,9 +164,12 @@ export default function Qualifications() {
             {/* Testimonial Quote */}
             <div className="pt-2 space-y-4">
               <Quote size={28} className="text-[#E50914]/30 rotate-180" />
-              <p className="text-gray-300 text-sm leading-relaxed italic">
+              <TextShimmer
+                duration={3.5}
+                className="text-xs md:text-sm italic text-neutral-300 leading-relaxed [--base-color:#888888] [--base-gradient-color:#ffffff]"
+              >
                 "Adeel Hussain has been an outstanding ambassador at DataCrumbs, consistently demonstrating dedication, professionalism, and a strong commitment to excellence. His proactive mindset makes him a valuable member of any engineering team."
-              </p>
+              </TextShimmer>
             </div>
           </div>
 
@@ -173,7 +177,7 @@ export default function Qualifications() {
             {/* Signature & Author info */}
             <div className="flex items-end justify-between border-t border-white/5 pt-4">
               <div>
-                <p className="font-serif italic text-lg text-white font-semibold">Falak Muhammad</p>
+                <p className="font-display text-lg font-extrabold tracking-tight text-white">Falak Muhammad</p>
                 <p className="text-[10px] font-mono text-gray-400 uppercase tracking-wider">
                   ChangeMakers Manager, DataCrumbs
                 </p>

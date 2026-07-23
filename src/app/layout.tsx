@@ -1,4 +1,15 @@
 import './globals.css';
+import { Space_Grotesk, Inter } from 'next/font/google';
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-display',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
 
 export const metadata = {
   title: 'Portfolio | Agentic AI Engineer',
@@ -10,15 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Syne:wght@400..800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`dark scroll-smooth ${spaceGrotesk.variable} ${inter.variable}`}>
       <body className="bg-[#0a0a0a] text-white min-h-screen antialiased">
         {children}
       </body>
