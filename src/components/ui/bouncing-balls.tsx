@@ -52,10 +52,10 @@ export default function BouncingBalls({
     const canvas = canvasRef.current;
     if (!container || !canvas) return;
 
-    const ctx = canvas.getContext("2d")!;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
     function resize() {
-if (!container || !canvas || !ctx) return;
       const dpr = window.devicePixelRatio || 1;
       const w = container.offsetWidth;
       const h = container.offsetHeight;

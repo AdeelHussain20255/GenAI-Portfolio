@@ -24,11 +24,14 @@ export default function Hero() {
     <section id="hero" className="relative min-h-[90vh] text-white flex flex-col justify-center px-6 lg:px-16 pt-24 md:pt-32 pb-12">
       
       {/* 1. GIANT CONDENSED BACKDROP TEXT */}
-      <div className="absolute top-6 left-0 w-full flex justify-center pointer-events-none select-none z-0">
-        <h1 className="glow-text-red inline-block font-black text-[#E50914] tracking-tighter uppercase origin-top scale-x-110 scale-y-125 md:scale-x-115 md:scale-y-[1.35] text-[13vw] leading-none select-none">
-          PORTFOLIO
-        </h1>
-      </div>
+      <h1
+        className="absolute top-6 sm:top-8 left-1/2 -translate-x-1/2 text-[14.5vw] font-black uppercase text-[#E50914] tracking-tight leading-none select-none pointer-events-none z-0 whitespace-nowrap scale-x-[1.08] scale-y-[1.18] origin-center"
+        style={{
+          textShadow: '0 0 15px rgba(229, 9, 20, 0.9), 0 0 35px rgba(229, 9, 20, 0.8), 0 0 75px rgba(229, 9, 20, 0.6), 0 0 120px rgba(229, 9, 20, 0.4)'
+        }}
+      >
+        PORTFOLIO
+      </h1>
 
       {/* 2. MAIN HERO CONTENT */}
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-end max-w-7xl mx-auto w-full pt-20">
